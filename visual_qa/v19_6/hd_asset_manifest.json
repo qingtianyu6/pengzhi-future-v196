@@ -1,0 +1,194 @@
+[
+  {
+    "file": "pure-scenes/greenhouse-wide-2560.webp",
+    "width": 2560,
+    "height": 1426,
+    "bytes": 563740
+  },
+  {
+    "file": "pure-scenes/greenhouse-wide.png",
+    "width": 2200,
+    "height": 1226,
+    "bytes": 3509865
+  },
+  {
+    "file": "pure-scenes/sensor-clean-2560.webp",
+    "width": 2560,
+    "height": 1707,
+    "bytes": 557812
+  },
+  {
+    "file": "pure-scenes/greenhouse-card-2560.webp",
+    "width": 2560,
+    "height": 1426,
+    "bytes": 472206
+  },
+  {
+    "file": "pure-scenes/sensor-clean.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 330320
+  },
+  {
+    "file": "pure-scenes/disease-gallery.png",
+    "width": 2200,
+    "height": 1169,
+    "bytes": 2227989
+  },
+  {
+    "file": "pure-scenes/greenhouse-wide.webp",
+    "width": 1680,
+    "height": 936,
+    "bytes": 303552
+  },
+  {
+    "file": "pure-scenes/greenhouse-wide-3360.webp",
+    "width": 3360,
+    "height": 1872,
+    "bytes": 741480
+  },
+  {
+    "file": "pure-scenes/greenhouse-card.webp",
+    "width": 1680,
+    "height": 936,
+    "bytes": 330574
+  },
+  {
+    "file": "pure-scenes/disease-phone.png",
+    "width": 2200,
+    "height": 1650,
+    "bytes": 3140679
+  },
+  {
+    "file": "pure-scenes/seedling-wide.png",
+    "width": 2200,
+    "height": 1222,
+    "bytes": 3698127
+  },
+  {
+    "file": "pure-scenes/strawberry-wide.png",
+    "width": 2200,
+    "height": 1222,
+    "bytes": 3003949
+  },
+  {
+    "file": "pure-scenes/flower-wide.png",
+    "width": 2200,
+    "height": 1222,
+    "bytes": 3668246
+  },
+  {
+    "file": "pure-scenes/sensor-clean.png",
+    "width": 2200,
+    "height": 1467,
+    "bytes": 4326919
+  },
+  {
+    "file": "pure-scenes/sensor-clean-3360.webp",
+    "width": 3360,
+    "height": 2240,
+    "bytes": 700866
+  },
+  {
+    "file": "pure-scenes/regional-base-clean.png",
+    "width": 2200,
+    "height": 1100,
+    "bytes": 3962321
+  },
+  {
+    "file": "pure-scenes/sensor-clean-1920.webp",
+    "width": 1920,
+    "height": 1280,
+    "bytes": 422682
+  },
+  {
+    "file": "pure-scenes/greenhouse-wide-1920.webp",
+    "width": 1920,
+    "height": 1070,
+    "bytes": 413866
+  },
+  {
+    "file": "pure-scenes/greenhouse-card-1920.webp",
+    "width": 1920,
+    "height": 1070,
+    "bytes": 372992
+  },
+  {
+    "file": "pure-scenes/greenhouse-card.png",
+    "width": 2200,
+    "height": 1226,
+    "bytes": 3853080
+  },
+  {
+    "file": "platform-intro/棚智未来_平台介绍页面素材包/photo_refs/10_痛点_温室数据场景参考.png",
+    "width": 2200,
+    "height": 1856,
+    "bytes": 4769214
+  },
+  {
+    "file": "platform-intro/棚智未来_平台介绍页面素材包/photo_refs/14_团队实地测试参考.png",
+    "width": 2200,
+    "height": 1650,
+    "bytes": 4283056
+  },
+  {
+    "file": "platform-intro/棚智未来_平台介绍页面素材包/photo_refs/06_痛点_传感器设备参考.png",
+    "width": 2200,
+    "height": 1856,
+    "bytes": 5334279
+  },
+  {
+    "file": "platform-intro/棚智未来_平台介绍页面素材包/photo_refs/07_痛点_手机信息参考.png",
+    "width": 2200,
+    "height": 1856,
+    "bytes": 1527841
+  },
+  {
+    "file": "platform-intro/棚智未来_平台介绍页面素材包/photo_refs/08_痛点_病害叶片参考.png",
+    "width": 2200,
+    "height": 1856,
+    "bytes": 2481648
+  },
+  {
+    "file": "platform-intro/棚智未来_平台介绍页面素材包/photo_refs/09_痛点_农事记录本参考.png",
+    "width": 2200,
+    "height": 1856,
+    "bytes": 1048576
+  },
+  {
+    "file": "scenarios-design/fruit-strawberry.png",
+    "width": 2200,
+    "height": 990,
+    "bytes": 2505236
+  },
+  {
+    "file": "scenarios-design/seedling-nursery.png",
+    "width": 2200,
+    "height": 990,
+    "bytes": 3225076
+  },
+  {
+    "file": "scenarios-design/vegetable-tomato.png",
+    "width": 2200,
+    "height": 990,
+    "bytes": 3473943
+  },
+  {
+    "file": "scenarios-design/flower-greenhouse.png",
+    "width": 2200,
+    "height": 990,
+    "bytes": 3150784
+  },
+  {
+    "file": "highlights-design/disease-gallery.png",
+    "width": 2200,
+    "height": 640,
+    "bytes": 1568747
+  },
+  {
+    "file": "results-design/farmer-portrait.png",
+    "width": 1600,
+    "height": 1698,
+    "bytes": 1318935
+  }
+]
