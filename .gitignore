@@ -31,6 +31,11 @@ env/
 *.sqlite3
 *.log
 
+# Generated model artifacts and visual QA output
+backend/app/ml/artifacts/
+backend/app/artifacts/
+visual_qa/
+
 # OS and editor files
 .DS_Store
 Thumbs.db
