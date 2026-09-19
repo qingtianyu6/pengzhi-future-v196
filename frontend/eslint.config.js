@@ -20,6 +20,8 @@ export default tseslint.config(
     rules: {
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      // 中文排版中全角空格(U+3000)是有意的视觉分隔，默认规则会误报，故关闭。
+      'no-irregular-whitespace': 'off',
     },
   },
 )

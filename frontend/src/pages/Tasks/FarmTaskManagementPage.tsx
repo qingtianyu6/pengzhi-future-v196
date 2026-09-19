@@ -50,7 +50,7 @@ export default function FarmTaskManagementPage() {
   const [greenhouses, setGreenhouses] = useState<Greenhouse[]>([])
   const [batches, setBatches] = useState<CropBatch[]>([])
   const [greenhouseId, setGreenhouseId] = useState<number | undefined>(() => Number(searchParams.get('greenhouse_id')) || undefined)
-  const [batchId, setBatchId] = useState<number | undefined>(() => Number(searchParams.get('batch_id')) || undefined)
+  const [batchId] = useState<number | undefined>(() => Number(searchParams.get('batch_id')) || undefined)
   const [status, setStatus] = useState<TaskStatus | undefined>()
   const [priority, setPriority] = useState<TaskPriority | undefined>()
   const [sourceType, setSourceType] = useState<string | undefined>()
@@ -143,12 +143,6 @@ export default function FarmTaskManagementPage() {
     return () => { cancelled = true }
   }, [messageApi, taskIdFromUrl])
 
-  const changeGreenhouse = (value: number | undefined) => {
-    setGreenhouseId(value); setBatchId(undefined); setPage(1)
-    const next = new URLSearchParams(searchParams)
-    if (value) next.set('greenhouse_id', String(value)); else next.delete('greenhouse_id')
-    next.delete('batch_id'); setSearchParams(next, { replace: true })
-  }
   const closeDetail = () => {
     const next = new URLSearchParams(searchParams)
     next.delete('task_id')

@@ -1,5 +1,5 @@
 import {
-  BarChartOutlined, BulbOutlined, CheckCircleOutlined, CloudOutlined, DatabaseOutlined,
+  BulbOutlined, CheckCircleOutlined, CloudOutlined, DatabaseOutlined,
   DeploymentUnitOutlined, ExperimentOutlined, FileTextOutlined, PictureOutlined,
   RobotOutlined, SyncOutlined, ThunderboltOutlined,
 } from '@ant-design/icons'

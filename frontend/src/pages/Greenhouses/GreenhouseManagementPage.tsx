@@ -5,7 +5,7 @@ import type { ColumnsType } from 'antd/es/table'
 import { useNavigate } from 'react-router-dom'
 import { createCropBatch } from '../../api/cropBatchApi'
 import { getApiErrorMessage } from '../../api/client'
-import { createGreenhouse, deleteGreenhouse, getGreenhouse, getGreenhouses, updateGreenhouse } from '../../api/greenhouseApi'
+import { createGreenhouse, getGreenhouse, getGreenhouses, updateGreenhouse } from '../../api/greenhouseApi'
 import type { CropBatchInput, CropType } from '../../types/cropBatch'
 import type { Greenhouse, GreenhouseInput, GreenhouseStatus } from '../../types/greenhouse'
 
@@ -44,7 +44,7 @@ export default function GreenhouseManagementPage({ embedded = false }: { embedde
   const [form] = Form.useForm<GreenhouseFormValues>()
   const [batchForm] = Form.useForm<BatchFormValues>()
   const [messageApi, messageContext] = message.useMessage()
-  const [modalApi, modalContext] = Modal.useModal()
+  const [, modalContext] = Modal.useModal()
 
   const loadData = useCallback(async () => {
     setLoading(true)
@@ -125,25 +125,6 @@ export default function GreenhouseManagementPage({ embedded = false }: { embedde
       await loadData()
     } catch (requestError) { messageApi.error(getApiErrorMessage(requestError)) }
     finally { setSaving(false) }
-  }
-
-  const removeGreenhouse = (greenhouse: Greenhouse) => {
-    modalApi.confirm({
-      title: '确认删除大棚？',
-      content: '删除后，该大棚关联的环境数据、种植批次、预警、决策、病害检测记录和农事任务将一并删除，此操作不可恢复。',
-      okText: '确认删除', cancelText: '取消', okButtonProps: { danger: true },
-      onOk: async () => {
-        try {
-          await deleteGreenhouse(greenhouse.id)
-          if (detail?.id === greenhouse.id) setDetail(null)
-          messageApi.success('大棚删除成功')
-          await loadData()
-        } catch (requestError) {
-          messageApi.error(getApiErrorMessage(requestError))
-          throw requestError
-        }
-      },
-    })
   }
 
   const columns: ColumnsType<Greenhouse> = [

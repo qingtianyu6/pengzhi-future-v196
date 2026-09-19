@@ -1,3 +1,4 @@
+import type { ElementType } from 'react'
 import {
   AreaChartOutlined, BarChartOutlined, CameraOutlined, CheckCircleOutlined, CloudOutlined,
   ExperimentOutlined, FileTextOutlined, SettingOutlined, TeamOutlined,
@@ -26,7 +27,7 @@ const heroFeatures = [
 
 type Scenario = {
   number: string; title: string; lead: string; image: string;
-  features: [any,string,string][]; benefits: string[]; note: string
+  features: [ElementType, string, string][]; benefits: string[]; note: string
 }
 
 const scenarios: Scenario[] = [

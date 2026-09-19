@@ -1,6 +1,6 @@
 import {
   AreaChartOutlined, BarChartOutlined, CheckCircleOutlined, DatabaseOutlined,
-  ExperimentOutlined, FileTextOutlined, SafetyCertificateOutlined, TeamOutlined, TrophyOutlined,
+  ExperimentOutlined, SafetyCertificateOutlined, TeamOutlined, TrophyOutlined,
 } from '@ant-design/icons'
 import { CountUp, MarketingReveal } from '../components/MarketingReveal'
 import { CertificateStrip, DashboardMockup } from '../components/MarketingVisuals'
