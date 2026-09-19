@@ -56,7 +56,11 @@ export function SiteLayout() {
     return () => { document.body.style.overflow = previous }
   }, [searchOpen, mobileMenuOpen])
   return (
-    <main className="site-home reference-site-home">
+    <main
+      className={`site-home reference-site-home ${
+        pathname === '/home' ? 'is-home-page' : 'is-scroll-page'  
+      }`}
+    >
       <header className="reference-site-nav">
         <Link className="reference-brand" to="/home" aria-label="棚智未来首页">
           <BrandMark />

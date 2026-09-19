@@ -260,7 +260,7 @@ button, input { font: inherit; }
 .dashboard-greenhouse-drawer .page-intro { margin-top: 0; }
 
 /* 项目官网：首页讲清项目，/platform 保留真实业务工作台。 */
-.site-home { overflow: hidden; color: #183b30; background: #fff; }
+.site-home { overflow-x: hidden; overflow-y: visible; color: #183b30; background: #fff; }
 .site-nav { position: sticky; top: 0; display: flex; align-items: center; gap: 28px; height: 76px; padding: 0 max(5vw, 36px); border-bottom: 1px solid rgba(28, 81, 61, .09); background: rgba(255,255,255,.92); backdrop-filter: blur(15px); z-index: 30; }
 .site-brand { display: inline-flex; align-items: center; gap: 10px; color: #123e31; text-decoration: none; white-space: nowrap; }.site-brand > span { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 10px 3px 10px 3px; color: #174637; background: #f4b842; font-size: 17px; font-weight: 850; }.site-brand strong { font-size: 18px; letter-spacing: .08em; }
 .site-nav nav { display: flex; justify-content: center; flex: 1; gap: clamp(12px, 2vw, 28px); }.site-nav nav a { color: #4d6a60; font-size: 13px; font-weight: 650; text-decoration: none; white-space: nowrap; transition: color .16s ease; }.site-nav nav a:hover { color: #118162; }.site-enter { display: inline-flex; align-items: center; gap: 8px; padding: 11px 15px; border-radius: 9px; color: white; background: #168464; box-shadow: 0 7px 16px rgba(18,122,91,.18); font-size: 13px; font-weight: 700; text-decoration: none; }
@@ -596,7 +596,7 @@ button, input { font: inherit; }
 .agent-mascot.compact { width: 32px; height: 38px; }
 
 /* Reference landing page: the public home follows the supplied 1:1 visual language. */
-.reference-site-home { min-height: 100vh; overflow: hidden; color: #0d332d; background: #f4f7f2; }
+.reference-site-home { min-height: 100vh; overflow-x: hidden; overflow-y: visible; color: #0d332d; background: #f4f7f2; }
 .reference-site-nav { position: relative; z-index: 20; display: flex; align-items: center; height: 96px; padding: 0 3.4vw; gap: 38px; background: rgba(255,255,255,.92); border-bottom: 1px solid rgba(23,82,67,.12); backdrop-filter: blur(16px); }
 .reference-brand { display: flex; align-items: center; gap: 12px; min-width: 260px; color: #073f32; text-decoration: none; }
 .reference-brand svg { width: 55px; height: 55px; fill: none; stroke: #087a5d; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
@@ -1333,4 +1333,81 @@ body { color: var(--saas-text); background: var(--saas-bg); }
   .reference-search svg{width:22px;height:22px}
   .reference-guest,.reference-login,.reference-register{height:48px;border-radius:9px;padding:0 18px;font-size:14px}
   .reference-register{min-width:68px}
+}
+
+/* ==================================================
+   官网滚动最终修复
+   只允许浏览器 BODY 出现纵向滚动条
+   ================================================== */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+}
+
+html {
+  overflow-x: clip;
+  overflow-y: auto;
+}
+
+body {
+  margin: 0;
+
+  /* 不产生自己的滚动条，交给 html 层 */
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+#root {
+  overflow: visible;
+}
+
+
+/* 官网最外层不能自己产生纵向滚动条 */
+.reference-site-home {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+
+  overflow-x: clip;
+  overflow-y: visible !important;
+
+  overscroll-behavior-y: auto;
+}
+
+
+/* 首页：保持严格一屏 */
+.reference-site-home.is-home-page {
+  height: 100vh;
+  min-height: 100vh;
+
+  overflow: hidden !important;
+}
+
+
+/* 其他官网页面：
+   自己不要滚，让 BODY 滚 */
+.reference-site-home.is-scroll-page {
+  height: auto !important;
+  min-height: 100vh;
+
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+
+  max-height: none !important;
+}
+
+
+/* 营销页本身也不能成为滚动容器 */
+.marketing-page {
+  height: auto !important;
+  min-height: 0;
+
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+
+  max-height: none !important;
 }

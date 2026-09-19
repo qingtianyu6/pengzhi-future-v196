@@ -1,6 +1,6 @@
 .marketing-reveal{opacity:0;transform:translateY(28px);transition:opacity .72s cubic-bezier(.2,.7,.2,1),transform .72s cubic-bezier(.2,.7,.2,1)}
 .marketing-reveal.is-shown{opacity:1;transform:none}
-.marketing-page{--green:#087b5d;--green-deep:#0d3e31;--green-mid:#168565;--green-soft:#eaf6f0;--ink:#123a2f;--muted:#6d8179;--line:#dceae3;background:#fff;color:var(--ink);font-family:Inter,'MiSans','HarmonyOS Sans SC','PingFang SC','Microsoft YaHei',sans-serif;overflow:hidden}
+.marketing-page{--green:#087b5d;--green-deep:#0d3e31;--green-mid:#168565;--green-soft:#eaf6f0;--ink:#123a2f;--muted:#6d8179;--line:#dceae3;background:#fff;color:var(--ink);font-family:Inter,'MiSans','HarmonyOS Sans SC','PingFang SC','Microsoft YaHei',sans-serif;overflow-x:clip;overflow-y:visible}
 .marketing-hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(480px,1.08fr);min-height:560px;overflow:hidden;background:linear-gradient(90deg,#fff 0%,#fbfdfb 43%,#eaf3ef 100%)}
 .marketing-hero-copy{z-index:2;padding:72px 5vw 54px max(5vw,70px);align-self:center}
 .marketing-kicker{margin:0 0 16px;color:#657d74;font-size:15px;letter-spacing:.08em}
